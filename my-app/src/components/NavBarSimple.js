@@ -12,8 +12,6 @@ class NavBarSimple extends Component {
         }
     }
 
-    /* add eventhandler */ 
-    
     handleclick = () => {
         this.setState((prevState) => ({
             message: prevState.message === "Hello, guest!" ? "Welcome back, user!" : "Hello, guest!",
