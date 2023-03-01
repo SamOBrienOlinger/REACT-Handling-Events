@@ -1,19 +1,16 @@
 import React, { Component } from "react";
-import css from "./css/NavBarSimple.module.css";
+import css from "./css/NavBarForm.module.css";
 
-class NavBarSimple extends Component {
+class NavBarForm extends Component {
 
     constructor(props) {
         super(props);
         
         this.state = {
-            message: "Hello, guest!",
-            buttonText: "Log in"
+            isLoggedIn: true
         }
     }
 
-    /* add eventhandler */ 
-    
     handleclick = () => {
         this.setState((prevState) => ({
             message: prevState.message === "Hello, guest!" ? "Welcome back, user!" : "Hello, guest!",
@@ -35,4 +32,18 @@ class NavBarSimple extends Component {
     }
 }
 
-export default NavBarSimple
+//     render() {
+//         return (
+//             <div className={css.NavBar}>
+//                 <h1>My Gallery</h1>
+//                 <div>
+//                     <button>
+//                         Login
+//                     </button>
+//                 </div>
+//             </div>
+//         )
+//     }
+// }
+
+export default NavBarForm
